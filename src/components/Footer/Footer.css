@@ -1,0 +1,33 @@
+img{
+    height: 48px;
+    width: 160px;
+}
+.footer{
+    background-color: #323232 !important;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.text{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+.short-text{
+    color:white;
+    font-size: 15px;
+    line-height: 16px;
+}
+.copy{
+    color: rgb(221, 210, 210);
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.look{
+    display: flex;
+    justify-content: space-between;
+}
+.contact{
+    border-left: 1px solid grey;
+    margin-left: 8px;
+    padding-left: 16px;
+}
