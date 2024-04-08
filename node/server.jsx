@@ -1,22 +1,11 @@
-const express = require("express");
-const inshorts = require("inshorts-api");
+const express = require('express');
+const path = require('path');
+const app = express();
 
-const app = express(); // main thing
+app.use(express.static(path.join(__dirname, 'build')));
 
-app.use(express.json()); // to accept json data
-
-app.post("/", (req, res) => {
-  const { category, lang, numOfResults } = req.body;
-
-  var options = {
-    lang,
-    category,
-    numOfResults,
-  };
-
-  inshorts.get(options, function (result) {
-    res.send(result);
-  });
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(5000, console.log(`Server running in port ${5000}..`));
+app.listen(9000);
